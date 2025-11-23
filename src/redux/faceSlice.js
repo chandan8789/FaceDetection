@@ -1,9 +1,8 @@
-// src/redux/faceSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  capturedImagePath: null,     // camera se aayi image path
-  result: null,                // { success: boolean, score: number }
+  capturedImagePath: null,
+  result: null,
 };
 
 const faceSlice = createSlice({
@@ -12,10 +11,10 @@ const faceSlice = createSlice({
   reducers: {
     setCapturedImagePath(state, action) {
       state.capturedImagePath = action.payload;
-      state.result = null; // naya capture = purana result clear
+      state.result = null;
     },
     setResult(state, action) {
-      state.result = action.payload; // { success, score }
+      state.result = action.payload;
     },
     resetFaceState() {
       return initialState;

@@ -1,4 +1,3 @@
-// src/screens/CameraScreen.js
 import React, { useEffect, useRef, useState } from 'react';
 import {
   View,
@@ -30,7 +29,7 @@ export default function CameraScreen({ navigation }) {
       if (status !== 'granted') {
         Alert.alert(
           'Permission required',
-          'Camera permission is needed for face authentication.'
+          'Camera permission is needed for face authentication.',
         );
       }
     })();
